@@ -1,0 +1,6 @@
+names:
+- Graffiti
+nc: 1
+path: D:\COS40007\Week_06\dataset
+train: images/train
+val: images/val
