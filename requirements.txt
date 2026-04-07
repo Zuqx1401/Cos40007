@@ -1,7 +1,7 @@
-opencv-contrib-python-headless==4.8.1.78
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
 ultralytics==8.1.0
 streamlit>=1.32.0
 pandas
 matplotlib
 Pillow
-numpy
