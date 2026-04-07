@@ -159,7 +159,7 @@ with col_main:
         tab1, tab2 = st.tabs(["Image Upload", "Live Webcam"])
 
         with tab1:
-            uploaded_file = st.file_uploader("Upload Image", type=['jpg', 'jpeg', 'png'])
+            uploaded_file = st.file_uploader("Upload Image")
             if uploaded_file:
                 image = Image.open(uploaded_file)
                 results = model.predict(np.array(image), conf=st.session_state.conf_threshold, iou=IOU_THRESHOLD, verbose=False)
