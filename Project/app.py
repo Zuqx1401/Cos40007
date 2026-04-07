@@ -1,3 +1,4 @@
+import sys
 import os
 os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
 import subprocess
