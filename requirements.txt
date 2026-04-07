@@ -1,15 +1,7 @@
 opencv-python-headless==4.9.0.80
-ultralytics>=8.1.0 --no-deps
-torch>=2.0.0
-torchvision
-numpy
+ultralytics>=8.1.0
+streamlit>=1.32.0
 pandas
 matplotlib
 Pillow
-streamlit>=1.32.0
-PyYAML
-requests
-psutil
-py-cpuinfo
-tqdm
-scipy
+numpy
