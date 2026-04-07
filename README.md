@@ -56,7 +56,9 @@ Bash
 pip install -r requirements.txt
 
 ▶️ Khởi Chạy Hệ Thống
-    Dự án hỗ trợ 2 chế độ vận hành chính:Chế độ Dashboard 
+    Dự án hỗ trợ 2 chế độ vận hành chính:
+    
+    Chế độ Dashboard 
     Giao diện hiện đại, đầy đủ biểu đồ và quản lý lịch sử (Logs).
     Bash
     python -m streamlit run app.py
