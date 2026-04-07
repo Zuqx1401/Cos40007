@@ -1,8 +1,11 @@
-import sys
-import os
+import os, sys
 os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+
 import subprocess
-subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python"], capture_output=True)
+subprocess.run([sys.executable, "-m", "pip", "install", 
+                "opencv-python-headless==4.9.0.80", "--force-reinstall"],
+               capture_output=True)
+import importlib
 import streamlit as st
 import cv2
 import numpy as np
