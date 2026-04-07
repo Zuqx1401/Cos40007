@@ -1,10 +1,24 @@
 import os, sys
 os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
 
-import subprocess
-subprocess.run([sys.executable, "-m", "pip", "install", 
-                "opencv-python-headless==4.9.0.80", "--force-reinstall"],
-               capture_output=True)
+import ctypes, glob
+try:
+    ctypes.CDLL("libGL.so.1")
+except OSError:
+    for pattern in [
+        "/usr/lib/x86_64-linux-gnu/libGLX_mesa.so*",
+        "/usr/lib/x86_64-linux-gnu/libGL.so*",
+        "/usr/lib/x86_64-linux-gnu/mesa/libGL.so*",
+    ]:
+        found = glob.glob(pattern)
+        if found:
+            try:
+                os.symlink(found[0], "/tmp/libGL.so.1")
+                ctypes.CDLL("/tmp/libGL.so.1")
+                os.environ["LD_PRELOAD"] = "/tmp/libGL.so.1"
+            except:
+                pass
+            break
 import importlib
 import streamlit as st
 import cv2
