@@ -1,5 +1,7 @@
 import os
 os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+import subprocess
+subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python"], capture_output=True)
 import streamlit as st
 import cv2
 import numpy as np
