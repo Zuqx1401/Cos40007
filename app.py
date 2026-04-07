@@ -156,7 +156,7 @@ col_main, col_side = st.columns([2, 1])
 with col_main:
     if menu == "Overview":
         st.subheader("Real-time Detection View")
-        tab1, tab2 = st.tabs(["Live Webcam", "Image Upload"])
+        tab1, tab2 = st.tabs(["Image Upload", "Live Webcam"])
 
         with tab1:
             uploaded_file = st.file_uploader("Upload Image", type=['jpg', 'jpeg', 'png'])
