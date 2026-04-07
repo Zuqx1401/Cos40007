@@ -1,27 +1,9 @@
-import os, sys
+import sys
+import os
 os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
-
-import ctypes, glob
-try:
-    ctypes.CDLL("libGL.so.1")
-except OSError:
-    for pattern in [
-        "/usr/lib/x86_64-linux-gnu/libGLX_mesa.so*",
-        "/usr/lib/x86_64-linux-gnu/libGL.so*",
-        "/usr/lib/x86_64-linux-gnu/mesa/libGL.so*",
-    ]:
-        found = glob.glob(pattern)
-        if found:
-            try:
-                os.symlink(found[0], "/tmp/libGL.so.1")
-                ctypes.CDLL("/tmp/libGL.so.1")
-                os.environ["LD_PRELOAD"] = "/tmp/libGL.so.1"
-            except:
-                pass
-            break
-import importlib
 import streamlit as st
 import cv2
+import importlib
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
