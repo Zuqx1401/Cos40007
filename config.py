@@ -23,7 +23,7 @@ toàn bộ mã nguồn.
 
 # Đường dẫn đến tệp mô hình đã huấn luyện
 # Nếu không tìm thấy, hệ thống sẽ tự động tải bản YOLOv5s làm demo
-MODEL_PATH = r"D:\COS40007\Project\best.pt"
+MODEL_PATH = r"best.pt"
 
 # Bản sao dự phòng - mô hình YOLOv11 mặc định (nếu best.pt không tồn tại)
 DEFAULT_MODEL = "yolo11n.pt"
